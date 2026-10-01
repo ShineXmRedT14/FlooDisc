@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "floodisc"
+version = "1.0"
+description = "Floodisc - Network tool by Shine"
+requires-python = ">=3.11"
+authors = [
+    {name = "Shine"}
+]
+
+dependencies = [
+    "scapy",
+    "aiohttp",
+    "aiofiles",
+    "rich",
+    "colorama"
+]
+
+[project.scripts]
+floodisc = "src.__main__:floodisc"
+
+[tool.setuptools]
+packages = ["src"]
+
+[tool.setuptools.package-data]
+"src" = ["*/*", "*"]
